@@ -4,8 +4,9 @@
 ![screenshot of a diagonal bar plot](/defaultData_screenshot.png)
 
 By modifying codes, you can plot data like this:
+![screenshot of a diagonal bar plot](/defaultData2_screenshot.png)
 ![gif of a diagonal bar plot](/defaultData2_flip.gif)
 
 
 - defaultData.csv is obtained [here](https://github.com/ytakefuji/ensemble-machine-learning/blob/master/ice.csv)
-- defaultData2.csv is obtained [here](https://www.kaggle.com/code/ukveteran/pivot-tables-titanic-dataset-jma/notebook)(modified by me)
+- defaultData2.csv is obtained [here](https://www.kaggle.com/code/ukveteran/pivot-tables-titanic-dataset-jma/notebook) (modified by me)

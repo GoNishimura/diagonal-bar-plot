@@ -17,7 +17,7 @@ let topEmptyCellNum = 2
 // let topEmptyCellNum = 0
 
 // modify based on your data
-const canvasLength = 800
+const canvasLength = 1100
 const titleTextSize = 40
 const labelTextSize = 20
 const tableOrigin = {
