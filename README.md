@@ -1,11 +1,14 @@
-# diagonal-bar-plot
+# Diagonal Bar Plot (斜め棒グラフ)
 ## A bar plot where bars are plotted diagonally to compare values horizontally and vertically at the same time.
 
 ![screenshot of a diagonal bar plot](images/defaultData_screenshot.png)
 
 By modifying codes, you can plot data like this:
-![screenshot of a diagonal bar plot](images/defaultData2_screenshot.png)
-![gif of a diagonal bar plot](images/defaultData2_flip.gif)
+![screenshot of a diagonal bar plot 2](images/defaultData2_screenshot.png)
+
+## How to read this plot
+![image of how to read](images/how_to_read.png)
+![gif of flipping plot](images/defaultData2_flip.gif)
 
 
 - defaultData.csv is obtained [here](https://github.com/ytakefuji/ensemble-machine-learning/blob/master/ice.csv)
