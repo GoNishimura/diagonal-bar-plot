@@ -39,7 +39,7 @@ const backgroundAlpha = 0
 let cells = []
 let cellLength = 0
 let maxDataObj = {}
-let minDataObj = {}
+let minRatioDataObj = {}
 let footerOrigin = {x: tableOrigin.x, y: tableOrigin.y}
 let firstDraw = true
 let barType = 'Diagonal Bar'
@@ -75,14 +75,15 @@ function draw() {
     const colName = csvTable.columns[index]
     const colArray = csvTable.getColumn(colName)
     if (Number(colArray[0])) {
-      if (valueType === 'percentage') maxDataObj[colName] = 1
-      else maxDataObj[colName] = max(colArray.map(strValue => Number(strValue)))
-      minDataObj[colName] = min(colArray.map(strValue => Number(strValue)))
+      const valuesInNum = colArray.map(strValue => Number(strValue))
+      const maxValue = max(valuesInNum)
+      maxDataObj[colName] = valueType === 'percentage' ? 1 : maxValue
+      minRatioDataObj[colName] = min(valuesInNum) / maxValue
       col2SeeSelect.option(colName)
     }
   }
   // print(maxDataObj)
-  print({minDataObj})
+  print('cornerRatio can be:', minRatioDataObj, 'where it is now:', cornerRatio)
 
   // initiate cells
   for (let index = 0; index < csvTable.getRowCount() + topEmptyCellNum; index++) {
