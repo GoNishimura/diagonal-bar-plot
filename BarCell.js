@@ -87,6 +87,13 @@ class BarCell {
       } else if (drawType === 'Vertical Bar') {
         fill(verticalColor)
         rect(0, 0, topRight.x, this.cellLength)
+      } else if (drawType === 'Orthogonal Bars') {
+        fill(horizontalColor)
+        rect(0, topRight.y, this.cornerLength, this.cellLength - topRight.y)
+        fill(verticalColor)
+        rect(0, this.cellLength - this.cornerLength, topRight.x, this.cornerLength)
+        fill(palette[index])
+        rect(0, this.cellLength - this.cornerLength, this.cornerLength)
       }
       // value text
       textAlign(CENTER, CENTER)
@@ -97,6 +104,11 @@ class BarCell {
         translate(this.cellLength / 2, (bottomLeft.y + topRight.y) / 2)
       } else if (drawType === 'Vertical Bar') {
         translate(bottomLeft.x + topRight.x / 2, this.cellLength / 2)
+      } else if (drawType === 'Orthogonal Bars') {
+        textAlign(LEFT, CENTER)
+        translate(
+          bottomLeft.x, bottomLeft.y - this.cornerLength / 2
+        )
       } else {
         translate((bottomLeft.x + topRight.x) / 2, (bottomLeft.y + topRight.y) / 2)
       }

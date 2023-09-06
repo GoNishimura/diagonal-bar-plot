@@ -39,6 +39,7 @@ const backgroundAlpha = 0
 let cells = []
 let cellLength = 0
 let maxDataObj = {}
+let minDataObj = {}
 let footerOrigin = {x: tableOrigin.x, y: tableOrigin.y}
 let firstDraw = true
 let barType = 'Diagonal Bar'
@@ -76,10 +77,12 @@ function draw() {
     if (Number(colArray[0])) {
       if (valueType === 'percentage') maxDataObj[colName] = 1
       else maxDataObj[colName] = max(colArray.map(strValue => Number(strValue)))
+      minDataObj[colName] = min(colArray.map(strValue => Number(strValue)))
       col2SeeSelect.option(colName)
     }
   }
   // print(maxDataObj)
+  print({minDataObj})
 
   // initiate cells
   for (let index = 0; index < csvTable.getRowCount() + topEmptyCellNum; index++) {
@@ -130,6 +133,7 @@ function draw() {
   barTypeSelect.option('Diagonal Bar')
   barTypeSelect.option('Horizontal Bar')
   barTypeSelect.option('Vertical Bar')
+  barTypeSelect.option('Orthogonal Bars')
   barTypeSelect.selected(barType)
   barTypeSelect.changed(() => {
     barType = barTypeSelect.value()

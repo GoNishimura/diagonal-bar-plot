@@ -11,6 +11,10 @@ By modifying codes, you can plot data like this:
 ![image of how to read](images/how_to_read.png)
 ![gif of flipping plot](images/defaultData2_flip.gif)
 
+## Orthogonal Bars Plot is available as well
+![defaultData](images/defaultData-ortho.png)
+![defaultData2](images/defaultData2-ortho.png)
+
 
 - defaultData.csv is obtained [here](https://github.com/ytakefuji/ensemble-machine-learning/blob/master/ice.csv)
 - defaultData2.csv is obtained [here](https://www.kaggle.com/code/ukveteran/pivot-tables-titanic-dataset-jma/notebook) (modified by me)
