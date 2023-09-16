@@ -76,9 +76,9 @@ function draw() {
     const colArray = csvTable.getColumn(colName)
     if (Number(colArray[0])) {
       const valuesInNum = colArray.map(strValue => Number(strValue))
-      const maxValue = max(valuesInNum)
-      maxDataObj[colName] = valueType === 'percentage' ? 1 : maxValue
-      minRatioDataObj[colName] = min(valuesInNum) / maxValue
+      const valueMax = max(valuesInNum)
+      maxDataObj[colName] = valueType === 'percentage' ? 1 : valueMax
+      minRatioDataObj[colName] = min(valuesInNum) / valueMax
       col2SeeSelect.option(colName)
     }
   }
