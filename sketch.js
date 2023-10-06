@@ -33,7 +33,7 @@ const palette = [
   '#17becf', '#bcbd22', '#7f7f7f', '#e377c2', '#8c564b', 
   '#9467bd', '#d62728', '#2ca02c', '#ff7f0e', '#1f77b4'
 ]
-// if you need white background, set this 255
+// if you need white background when saving, set this 255
 const backgroundAlpha = 0
 // from below, no need to modify by yourself
 const colName2Bar = ['']
