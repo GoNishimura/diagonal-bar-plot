@@ -33,9 +33,10 @@ const palette = [
   '#17becf', '#bcbd22', '#7f7f7f', '#e377c2', '#8c564b', 
   '#9467bd', '#d62728', '#2ca02c', '#ff7f0e', '#1f77b4'
 ]
+// if you need white background, set this 255
+const backgroundAlpha = 0
 // from below, no need to modify by yourself
 const colName2Bar = ['']
-const backgroundAlpha = 0
 let cells = []
 let cellLength = 0
 let maxDataObj = {}
@@ -200,7 +201,7 @@ function draw() {
 
 
   /* draw */
-  background(0, backgroundAlpha)
+  background(255, backgroundAlpha)
   fill(0)
   // title
   textAlign(CENTER, BOTTOM)
@@ -217,8 +218,8 @@ function draw() {
     )
   }
   for (let index = 0; index < colLabels.length; index++) {
-    if (index === 5) fill(saturdayColor) // saturday
-    if (index === 6) fill(sundayColor) // sunday
+    if (index === 5 && valueType == 'calendar') fill(saturdayColor) // saturday
+    if (index === 6 && valueType == 'calendar') fill(sundayColor) // sunday
     text(
       colLabels[index], 
       tableOrigin.x + (index + 0.5) * cellLength, 
