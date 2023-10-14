@@ -1,11 +1,16 @@
 /* for defaultData */
-const rowLabels = ['', '', '', '', '']
-const colLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-const valueType = 'calendar'
+const rowLabels = [
+  '1854-04', '1854-05', '1854-06', '1854-07', '1854-08', '1854-09', '1854-10', '1854-11', '1854-12', 
+  '1855-01', '1855-02', '1855-03', '1855-04', '1855-05', '1855-06', '1855-07', '1855-08', '1855-09', 
+  '1855-10', '1855-11', '1855-12',
+  '1856-01', '1856-02', '1856-03',
+]
+const colLabels = ['Zymotic Diseases', 'Wounds and Injuries', 'Others',]
+const valueType = ''
 const cornerRatio = 0.2
 let csvFileName = 'defaultData.csv'
-let title = 'Sales of Ice in August, 2012'
-let topEmptyCellNum = 2
+let title = 'Causes of Death in the Biritish Army at the Crimean War per 1000'
+let topEmptyCellNum = 0
 
 /* for defaultData2 */
 // const rowLabels = ['Female', 'Male']
@@ -18,10 +23,10 @@ let topEmptyCellNum = 2
 
 // modify based on your data
 const canvasLength = 1100
-const titleTextSize = 40
-const labelTextSize = 20
+const titleTextSize = 20
+const labelTextSize = 10
 const tableOrigin = {
-  x: labelTextSize * 4, 
+  x: labelTextSize * 10, 
   y: titleTextSize + labelTextSize * 3
 }
 const horizontalColor = '#ff00ff'
